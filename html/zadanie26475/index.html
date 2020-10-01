@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://formspree.io/f/xyybzlje" method="post">
+
+        <label for="name">Imię:</label>
+        <input type="text" name="name" id="name" placeholder="Proszę podać imię" required><br>
+
+        <label for="surname">Nazwisko:</label>
+        <input type="text" name="surname" id="surname" placeholder="Proszę podać nazwisko" required><br>
+
+        <label for="email">Adres e-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Proszę podać adres e-mail" required><br>
+
+        <label for="phone">Telefon:</label>
+        <input type="tel" name="phone" id="phone" placeholder="Proszę podać numer telefonu" required><br>
+
+        Miasto:
+        <select type="select" name="select">
+            <option value="warszawa">Warszawa</option>
+            <option value="krakow">Kraków</option>
+            <option value="gdansk" selected>Gdańsk</option>
+        </select><br>
+
+        <label>Kobieta<input type="radio" name="gender" id="gender"></label>
+        <label>Mężczyzna<input type="radio" name="gender" id="gender"></label><br>
+
+        <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych</label>
+        <input type="checkbox" name="checkbox" id="checkbox" required><br>
+
+        <label for="message">Wiadomość:</label><br>
+        <textarea name="message" id="message"></textarea> <br>
+
+        <input type="submit" value="Wyślij">
+
+    </form>
+</body>
+
+</html>
