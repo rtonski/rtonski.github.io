@@ -22,18 +22,19 @@
         <label for="phone">Telefon:</label>
         <input type="tel" name="phone" id="phone" placeholder="Proszę podać numer telefonu" required><br>
 
-        Miasto:
-        <select name="select" id="select">
+        <label for="city">Miasto:</label>
+        <select name="city" id="city">
             <option value="warszawa">Warszawa</option>
             <option value="krakow">Kraków</option>
             <option value="gdansk" selected>Gdańsk</option>
         </select><br>
 
-        <label>Kobieta<input type="radio" name="gender" id="gender"></label>
-        <label>Mężczyzna<input type="radio" name="gender" id="gender"></label><br>
+        <label><input type="radio" name="gender" id="female">Kobieta</label>
+        <label><input type="radio" name="gender" id="male">Mężczyzna</label><br>
 
-        <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych</label>
-        <input type="checkbox" name="checkbox" id="checkbox" required><br>
+        <input type="checkbox" name="agree" id="agree" required><br>
+        <label for="agree">Wyrażam zgodę na przetwarzanie moich danych</label>
+
 
         <label for="message">Wiadomość:</label><br>
         <textarea name="message" id="message"></textarea> <br>
