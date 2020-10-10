@@ -1,0 +1,34 @@
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.width {
+    background: red;
+    transition: width 3s linear 0s
+}
+
+.width:hover {
+    width: 300px;
+}
+
+.height {
+    background: blue;
+    transition: height 3s linear 0s
+}
+
+.height:hover {
+    height: 300px;
+}
+
+.full {
+    background: green;
+    transition: all 3s linear 0s
+}
+
+.full:hover {
+    width: 300px;
+    height: 300px;
+}
