@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+#preloader-gif {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
