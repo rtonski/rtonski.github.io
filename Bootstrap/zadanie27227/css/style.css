@@ -1,0 +1,33 @@
+.icons {
+    color: rgba(209, 96, 4, 0.651);
+    font-size: 3em;
+    background-color: rgba(243, 243, 243, 0.397);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 10px;
+}
+
+p,
+h3 {
+    color: gray;
+    margin: 10px;
+    font-style: italic;
+}
+
+hr {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+/* .col-12 {
+    background-color: rgba(243, 243, 243, 0.397);
+    border-radius: 50%;
+    width: 100px;
+    height: 200px;
+} */
+
+/* .container {
+    background-color: turquoise;
+} */
