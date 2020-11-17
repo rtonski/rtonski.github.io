@@ -1,0 +1,38 @@
+button {
+    display: none;
+}
+
+h3 {
+    color: gray;
+    margin-top: 20px;
+}
+
+.faq {
+
+    color: rgb(228, 152, 10);
+    margin: 10px;
+}
+
+.faq:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.collapse {
+    background-color: white;
+    /* padding: 10px; */
+}
+
+.navbar {
+    border: 1px solid gray;
+    padding: 0;
+}
+
+.navbar-middle {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+hr {
+    width: 50%;
+}
