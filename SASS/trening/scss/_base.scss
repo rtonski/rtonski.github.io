@@ -1,0 +1,28 @@
+$font-color: orange;
+
+p {
+    color: $font-color;
+
+    &.nana {
+        color: blue;
+    }
+}
+
+div {
+    p {
+        @include color(yellow, 5px);
+
+        &.nana {
+            color: brown;
+        }
+    }
+}
+
+h3 {
+    color: $font-color;
+
+    &:hover {
+        color: cornflowerblue;
+    }
+
+}
