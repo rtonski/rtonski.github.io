@@ -1,0 +1,48 @@
+.form-field {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+    background-color: $primary-color;
+    display: inline-block;
+    padding: 15px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 120%;
+
+    &#appointment-date,
+    &#appointment-time {
+        width: 49%;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+
+    &::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+    &::-moz-placeholder {
+        color: #fff;
+    }
+
+    &:-ms-input-placeholder {
+        color: #fff;
+    }
+
+    &:-moz-placeholder {
+        color: #fff;
+    }
+
+    &.error {
+        border-bottom: 1px solid red;
+    }
+}
+
+textarea {
+    height: 100px;
+    // padding-top: 60px;
+    // margin-top: 30px;
+}

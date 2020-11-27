@@ -1,0 +1,109 @@
+.main-header {
+    height: 700px;
+    @include flexbox;
+    @include flex-align(flex-start, center);
+    position: relative;
+
+    .header-description {
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $secondary-font;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: #1e2528;
+        font-size: 50px;
+    }
+
+    .main-header-content {
+        color: $secondary-text-color;
+    }
+
+    .buttons-panel {
+        margin-top: 40px;
+        @include flexbox;
+
+        .reserve {
+            display: inline-block;
+            padding: 14px 20px;
+            text-decoration: none;
+            background-color: $primary-color;
+            color: #fff;
+            margin: 0 2px 0 0;
+            align-self: center;
+
+            &:hover {
+                background-color: $buttons-color;
+            }
+        }
+
+        .watch {
+            display: inline-block;
+            margin-left: 15px;
+            color: $secondary-color;
+            text-decoration: none;
+            align-self: center;
+
+            i {
+                border: 1px solid $secondary-color;
+                font-size: 16px;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                text-align: center;
+                line-height: 45px;
+                margin-right: 5px;
+                transition: all .3s;
+
+            }
+        }
+    }
+
+    .header-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        z-index: 1000000;
+        display: none;
+    }
+
+    .header-flowers {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        max-width: 8%;
+        z-index: -1;
+    }
+
+
+    @media all and (min-width: 1000px) {
+        .header-bg {
+            max-width: 45%;
+        }
+    }
+
+    @media all and (min-width: $large) {
+        .header-bg {
+            display: block;
+            max-width: 40%;
+        }
+
+        .main-header-holder {
+            width: 50%;
+        }
+    }
+
+    @media all and (max-width: $extra-small) {
+        .buttons-panel {
+
+            .reserve,
+            .watch {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}
