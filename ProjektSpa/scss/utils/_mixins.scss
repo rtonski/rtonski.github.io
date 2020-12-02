@@ -7,3 +7,33 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin menu-list {
+    list-style: none;
+    background-color: #fff;
+
+    .menu-item {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: initial;
+        text-transform: uppercase;
+        transition: all .3s;
+
+
+
+
+        a {
+            color: $secondary-color;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .3s;
+
+            &:hover {
+                text-shadow: 0px 0px 90px #1ba5cd;
+                // color: #fff;
+            }
+
+
+        }
+    }
+}

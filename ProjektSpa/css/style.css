@@ -325,6 +325,9 @@ section .section-header p {
 }
 
 @media all and (min-width: 768px) {
+  .col-md-66p {
+    width: 66.66%;
+  }
   .col-md-50p {
     width: 50%;
   }
@@ -425,21 +428,35 @@ section .section-header p {
     position: static;
     background-color: transparent;
     width: auto;
-    max-width: 45%;
+    max-width: 100%;
     padding: 0;
     align-self: flex-start;
   }
   .main-nav .main-nav-holder .open-menu-holder .menu {
+    list-style: none;
     background-color: #fff;
   }
   .main-nav .main-nav-holder .open-menu-holder .menu .menu-item {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
     font-size: initial;
+    text-transform: uppercase;
+    transition: all .3s;
   }
   .main-nav .main-nav-holder .open-menu-holder .menu .menu-item a {
     color: #473452;
     font-weight: 700;
+    text-decoration: none;
+    transition: all .3s;
+  }
+  .main-nav .main-nav-holder .open-menu-holder .menu .menu-item a:hover {
+    text-shadow: 0px 0px 90px #1ba5cd;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .main-nav .main-nav-holder .open-menu-holder .menu .menu-item {
+    margin: 0 20px;
   }
 }
 
@@ -639,8 +656,23 @@ section .section-header p {
   text-align: center;
 }
 
-.appointment form textarea {
-  padding-top: 72px;
+.appointment form .appointment-inf {
+  display: none;
+  width: 100%;
+  color: white;
+  margin-top: 50px;
+  font-size: 110%;
+  padding: 3px 0;
+}
+
+.appointment form .appointment-inf.error {
+  display: block;
+  box-shadow: 0px 0px 4px red;
+}
+
+.appointment form .appointment-inf.send {
+  display: block;
+  box-shadow: 0px 0px 4px white;
 }
 
 @media all and (min-width: 768px) {
@@ -655,9 +687,105 @@ section .section-header p {
   .appointment form select {
     width: 49%;
   }
+  .appointment form .btn-form {
+    flex: none;
+  }
   .appointment .desktop-background {
     display: block;
   }
+}
+
+.contact {
+  background-color: #1ba5cd;
+  color: #fff;
+}
+
+.contact .section-header h2 {
+  color: #fff;
+}
+
+.contact .contact-data {
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.contact .contact-data .contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.contact .contact-data .contact-item .img-holder {
+  width: 15%;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.contact .contact-data .contact-item .img-holder img {
+  height: 30px;
+}
+
+.contact .contact-data .contact-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact .contact-data .contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media all and (min-width: 768px) {
+  .contact .contact-data .contact-item {
+    justify-content: flex-start;
+  }
+}
+
+.contact .contact-form {
+  padding: 25px 0;
+}
+
+.page-footer {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.page-footer img {
+  width: 100px;
+}
+
+.page-footer .footer-nav .menu {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.page-footer .footer-nav .menu .menu-item {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: initial;
+  text-transform: uppercase;
+  transition: all .3s;
+}
+
+.page-footer .footer-nav .menu .menu-item a {
+  color: #473452;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.page-footer .footer-nav .menu .menu-item a:hover {
+  text-shadow: 0px 0px 90px #1ba5cd;
+}
+
+.page-footer .footer-nav .menu .menu-item {
+  padding: 5px 20px;
+}
+
+.page-footer .footer-nav .menu .menu-item a {
+  color: #835285;
 }
 
 .btn-primary, .btn-secondary, .btn-form {
@@ -691,7 +819,7 @@ section .section-header p {
   color: #473452;
   transition: all .3s;
   font-weight: 700;
-  margin: 50px auto 0 auto;
+  margin-top: 50px;
 }
 
 .btn-form:hover {
@@ -723,6 +851,24 @@ section .section-header p {
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 90%;
+}
+
+.infobox .infobox-inner p.meta {
+  font-size: 80%;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.infobox .infobox-inner p.meta .blog-category {
+  color: inherit;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.infobox .infobox-inner p.meta .blog-post-date {
+  color: inherit;
+  margin-left: 5px;
+  text-decoration: none;
 }
 
 .infobox-team {
@@ -792,7 +938,9 @@ section .section-header p {
   color: #fff;
 }
 
-.form-field {
+input,
+textarea,
+select {
   width: 100%;
   border: 0;
   border-bottom: 1px solid #ffffff;
@@ -806,35 +954,52 @@ section .section-header p {
   font-size: 120%;
 }
 
-.form-field#appointment-date, .form-field#appointment-time {
+input#appointment-date, input#appointment-time,
+textarea#appointment-date,
+textarea#appointment-time,
+select#appointment-date,
+select#appointment-time {
   width: 49%;
 }
 
-.form-field::-webkit-calendar-picker-indicator {
+input::-webkit-calendar-picker-indicator,
+textarea::-webkit-calendar-picker-indicator,
+select::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
-.form-field::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
   color: #fff;
 }
 
-.form-field::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
   color: #fff;
 }
 
-.form-field:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
   color: #fff;
 }
 
-.form-field:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+select:-moz-placeholder {
   color: #fff;
 }
 
-.form-field.error {
+input.error,
+textarea.error,
+select.error {
   border-bottom: 1px solid red;
 }
 
 textarea {
-  height: 100px;
+  height: 42px;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=style.css.map */

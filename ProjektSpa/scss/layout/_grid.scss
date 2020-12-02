@@ -8,6 +8,10 @@
 
 
 @media all and (min-width: $medium) {
+    .col-md-66p {
+        width: 66.66%;
+    }
+
     .col-md-50p {
         width: 50%;
     }

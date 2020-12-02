@@ -24,6 +24,24 @@
             margin-bottom: 20px;
             font-weight: 300;
             font-size: 90%;
+
+            &.meta {
+                font-size: 80%;
+                text-transform: uppercase;
+                margin-top: 25px;
+
+                .blog-category {
+                    color: inherit;
+                    margin-right: 5px;
+                    text-decoration: none;
+                }
+
+                .blog-post-date {
+                    color: inherit;
+                    margin-left: 5px;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
